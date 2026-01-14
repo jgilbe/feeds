@@ -52,7 +52,7 @@ foreach($products as $p) {
     $data['description'] = str_replace("\t", ' ', substr($p['description'], 0, 4995));
     $data['price'] = $p['price'] . ' GBP';
     if($p['sale_price'] > 0 && $p['sale_price'] < $p['price']) {
-        $data['sale_price'] = $p['sale_price'];
+        $data['sale_price'] = $p['sale_price'] . ' GBP';
     } else {
         $data['sale_price'] = '';
     }
